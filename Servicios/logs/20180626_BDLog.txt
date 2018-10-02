@@ -1,0 +1,18 @@
+07:43:22 AM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'mrodriguez9' ORDER BY 1
+07:43:22 AM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$kiPVyYFRzwPhF5KdEx9rEerYuhqC1iHYpYYSN2hzrE84UDQ83LqcO' WHERE id_usuario = 1
+07:43:28 AM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+07:43:44 AM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+07:44:07 AM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+07:45:06 AM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+07:45:52 AM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+07:47:18 AM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+07:47:37 AM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+09:47:16 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'mrodriguez9' ORDER BY 1
+09:47:17 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$Lj8Adq8TmavQUsNsvcV8eOK7PcS.fbLhRbZuCgROZd/ezqmihCBne' WHERE id_usuario = 1
+09:52:05 PM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+09:52:41 PM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+09:53:11 PM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+09:53:14 PM =>  DELETE FROM ad_noticia WHERE id_noticia = 2
+09:53:14 PM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+09:53:26 PM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 
+10:07:46 PM => SELECT N.id_noticia, N.titulo, to_char(N.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_noticia N, ad_usuario U WHERE N.usuario_modifica = U.id_usuario 

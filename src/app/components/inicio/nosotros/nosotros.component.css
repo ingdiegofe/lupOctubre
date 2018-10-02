@@ -1,0 +1,39 @@
+h1 {
+  color: white;
+}
+
+.persona{
+  height: 300px;
+}
+
+
+.atras{
+  height: 250px;
+}
+
+.trans {
+  opacity: 0.9;
+}
+
+.btn-group .btn{
+  width: 300px;
+}
+.centrar{
+
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.junto{
+  padding-top: 0%;
+}
+
+@media screen and (max-width: 900px){
+
+  .btn-group .btn{
+    width: 100px;
+  }
+
+  }

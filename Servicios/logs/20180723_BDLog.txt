@@ -1,0 +1,15 @@
+09:11:56 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+09:11:56 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$i0Yim1m4uXt6Z7ZNdQ2VWO7HKG6AoOyJPM2Ya2e/s01l9PLgauaV.' WHERE id_usuario = 2
+09:12:01 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+09:12:55 PM =>  select  cat.*, count(emp.categoria) cant  from  ad_categoria_empresa cat  left join ad_empresa emp on cat.id_categoria_empresa = emp.categoria where 1 = 1 and cat.nombre like '%%' group by  emp.categoria, cat.id_categoria_empresa order by cat.nombre 
+09:12:57 PM =>  select  *  from  ad_empresa where 1 = 1 and categoria = 1 and nombre like '%%' order by fecha_creacion desc limit 50 
+09:13:04 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 25)
+09:17:03 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+09:17:04 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$6xSIVsSa995fYUWKDXWno.ZYp/4PwqX1XXVvsQilTu80GoJR0AaZy' WHERE id_usuario = 2
+09:17:07 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+09:21:33 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+09:22:39 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+09:22:44 PM =>  select  cat.*, count(emp.categoria) cant  from  ad_categoria_empresa cat  left join ad_empresa emp on cat.id_categoria_empresa = emp.categoria where 1 = 1 and cat.nombre like '%%' group by  emp.categoria, cat.id_categoria_empresa order by cat.nombre 
+09:22:45 PM =>  select  *  from  ad_empresa where 1 = 1 and categoria = 1 and nombre like '%%' order by fecha_creacion desc limit 50 
+09:30:00 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 25)
+09:33:41 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 25)

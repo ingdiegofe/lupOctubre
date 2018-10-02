@@ -1,0 +1,36 @@
+{
+  "name": "waneduservicioadministracion",
+  "version": "1.0.0",
+  "description": "Servicio de administracion",
+  "main": "node server.js",
+  "scripts": {
+    "setup": "[ -d uploads ] || mkdir uploads",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "multipart",
+    "upload",
+    "file",
+    "form",
+    "hapi",
+    "demo"
+  ],
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "date-format": "^1.2.0",
+    "dateformat": "^3.0.3",
+    "hapi": "^15.0.3",
+    "hapi-auth-jwt-simple": "^1.0.0",
+    "hapi-cors-headers": "^1.0.0",
+    "jsonwebtoken": "^8.1.0",
+    "jsreport-client": "^0.4.1",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.19.2",
+    "mongoose": "*",
+    "nodemailer": "^4.4.0",
+    "nodemon": "^1.11.0",
+    "paypal-rest-sdk": "^1.8.1",
+    "pg": "^6.1.0"
+  }
+}

@@ -1,0 +1,4 @@
+<div class="alert div-mensaje-usuario" *ngIf="visible" [ngClass]="ObtenerClaseCss()">
+  <button type="button" class="close" (click)="Ocultar()">&times;</button>
+  {{ mensaje }}
+</div>

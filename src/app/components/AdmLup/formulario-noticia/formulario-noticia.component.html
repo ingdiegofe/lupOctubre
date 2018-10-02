@@ -1,0 +1,53 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="admin-container">
+  <h3 class="h-admin">{{ Titulo }}</h3>
+  <br/>
+  <div style="text-align:center;">
+    <app-mensaje-admin></app-mensaje-admin>
+  </div>
+  <div class="" style="max-width:700px;">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-3" *ngIf="Operacion!='agregar'">
+          <label>Id:</label>
+          <input type="text" class="form-control" placeholder="Id usuario" maxlength="200" [(ngModel)]="Noticia.id_noticia" disabled>
+        </div>
+        <div class="col-6">
+          <label>Título:</label>
+          <input type="text" class="form-control" placeholder="Título noticia" maxlength="200" [(ngModel)]="Noticia.titulo" [disabled]="Operacion=='informacion'">
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-12">
+          <label>Contenido:</label>
+          <textarea [(ngModel)]="Noticia.texto" class="form-control">
+
+          </textarea>
+        </div>
+      </div>
+      <br/>
+      <div class="row" *ngIf="Operacion!='agregar'">
+        <div class="col-3">
+          <label>Fecha creación:</label>
+          <input type="text" class="form-control" placeholder="Fecha creación" maxlength="50" [(ngModel)]="Noticia.fecha_creacion" disabled>
+        </div>
+        <div class="col-3">
+          <label>Fecha modificación:</label>
+          <input type="text" class="form-control" placeholder="Fecha Modificación" maxlength="50" [(ngModel)]="Noticia.fecha_modificacion" disabled>
+        </div>
+      </div>
+      <br/>
+      <div *ngIf="Operacion == 'agregar'">
+        <button class="btn btn-sm btn-admin-lup" (click)="AgregarNoticia()">Guardar</button>
+      </div>
+      <div *ngIf="Operacion == 'modificar'">
+        <button class="btn btn-sm btn-admin-lup" >Modificar</button>
+      </div>
+      <button class="btn btn-sm btn-link" onclick=" window.location = '/mantN'; ">Regresar</button>
+    </div>
+  </div>
+</div>
+<div style="text-align: center;">
+  <app-loader-admin></app-loader-admin>
+</div>

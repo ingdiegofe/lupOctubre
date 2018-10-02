@@ -1,0 +1,15 @@
+@-webkit-keyframes girando {
+  from { -webkit-transform: rotateY(0deg);    }
+  to   { -webkit-transform: rotateY(-360deg); }
+}
+
+.contenedor {
+   margin: 30px auto;
+   -webkit-perspective: 600px;
+   height: 350px;
+}
+
+
+.imgFrases{
+  height: 450px;
+}

@@ -1,0 +1,136 @@
+<app-navbar-in></app-navbar-in>
+<br>
+<div class="jumbotron jumbotron-fluid fadeIn" style="background-image:url('../assets/img/Carousel/lup2.jpg');">
+  <div class="container">
+    <h1 class="display-4" style="color: white;">Crear cuenta</h1>
+  </div>
+</div>
+
+<div class="container margen-arribaY">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+
+            <form [formGroup]="forma" (ngSubmit)="isEnviar && EnvioCorreo()">
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <div class="row">
+                  <div class="col-6">
+                    <input formControlName="nombres"
+                           type="input"
+                           class="form-control"
+                           placeholder="Nombres">
+                           <div *ngIf="forma.controls['nombres'].errors?.required"
+                                class="form-control-feedback text-muted">
+                               <small>*Requerido</small>
+                          </div>
+                  </div>
+                  <div class="col-6">
+                    <input formControlName="apellidos"
+                           type="input"
+                           class="form-control"
+                           placeholder="Apellidos">
+                           <div *ngIf="forma.controls['apellidos'].errors?.required"
+                                class="form-control-feedback text-muted">
+                               <small>*Requerido</small>
+                          </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input formControlName="email"
+                       type="email"
+                       class="form-control"
+                       placeholder="lup@gmail.com">
+                       <div *ngIf="forma.controls['email'].errors?.required"
+                            class="form-control-feedback text-muted">
+                           <small>*Requerido</small>
+                      </div>
+                       <div *ngIf="forma.controls['email'].errors?.pattern"
+                            class="form-control-feedback text-muted">
+                           <small>*correo invalido</small>
+                      </div>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Usuario</label>
+                <input formControlName="usuario"
+                       type="input"
+                       class="form-control"
+                       placeholder="user">
+                       <div class="row">
+
+                  <div class="col-sm-6">
+                    <div *ngIf="forma.controls['usuario'].errors?.required"
+                         class="form-control-feedback text-muted">
+                        <small>*Requerido</small>
+                   </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <small *ngIf="lngUsExiste==1" id="emailHelp" class="form-text text-danger">* Usuario existe</small>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Fecha Nacimiento</label>
+                <input formControlName="fecha_nacimiento"
+                       type="date"
+                       class="form-control">
+                       <div *ngIf="forma.controls['fecha_nacimiento'].errors?.required"
+                            class="form-control-feedback text-muted">
+                           <small>*Requerido</small>
+                      </div>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Pais</label>
+                <select formControlName="pais"
+                         class="form-control">
+                  <option selected></option>
+                  <option *ngFor="let item of strPais;let i=index"  [value]="i+1">{{ item.nombre }}</option>
+                </select>
+                <div *ngIf="forma.controls['pais'].errors?.required"
+                     class="form-control-feedback text-muted">
+                    <small>*Requerido</small>
+               </div>
+              </div>
+
+                <button type="submit" [ngClass]="{disabled : !isEnviar}" class="btn btn-dark btn-block" >Registrarse</button>
+                <br>
+                <div *ngIf="lngIngreso==1" class="alert alert-danger text-center" role="alert">
+                    {{ strMensaje }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                </div>
+                <div *ngIf="lngIngreso==2" class="alert alert-success text-center" role="alert">
+                    {{ strMensaje }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                </div>
+                <div  *ngIf="!lngAgregar==0" class="text-center">
+                    <i class="fa fa-circle-o-notch w3-spin" style="font-size:40px"></i>
+                </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+          <img src="../assets/img/frases/VIVE1.jpg" class="img-fluid imgFrases" alt="Responsive image">
+          <h1 class="display-4">Registrate con:</h1><hr>
+          <button type="button" class="btn btn-info btn-block">Facebook</button><br>
+          <button type="button" class="btn btn-danger btn-block">Google</button>
+      </div>
+    </div>
+</div>
+
+<br>
+
+<app-footer></app-footer>

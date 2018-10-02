@@ -1,0 +1,181 @@
+<app-navbar-in></app-navbar-in>
+<br>
+<div class="jumbotron jumbotron-fluid animated fadeIn atras trans"
+      [style.background-image]=" strImg | domseguro: '../assets' ">
+  <div class="container">
+    <br><br>
+    <h1 class="display-4 text-center">{{ strTitulo }}</h1>
+    <br>
+  </div>
+</div>
+
+    <div class="container centrar">
+      <div  class="btn-group btn-group-toggle text-center" data-toggle="buttons">
+        <label class="btn btn-outline-dark active" (click)="Cambio(1)" data-toggle="collapse" href="#nosotros1" aria-expanded="false">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Acerca de
+        </label>
+        <label class="btn btn-outline-dark " (click)="Cambio(2)" data-toggle="collapse" href="#nosotros2" aria-expanded="false">
+          <input type="radio" name="options" id="option2" autocomplete="off" > Mision
+        </label>
+        <label class="btn btn-outline-dark" (click)="Cambio(3)" data-toggle="collapse" href="#nosotros3" aria-expanded="false">
+          <input type="radio" name="options" id="option3" autocomplete="off" > Integrantes
+        </label>
+      </div>
+    </div>
+  <hr>
+<!-- Encabezado FIN -->
+
+<!-- Historia y Lema --->
+  <div id="nosotros1" class="jumbotron animated fadeIn ">
+    <div class="row">
+      <div class="col-sm-6">
+         <h4 class="text-primary">Historia</h4>
+
+         <p class="text-justify">
+           LUP es una entidad creada para ser el laso, conexión y
+           puente financiero entre el inversionista y la pequeña y mediana empresa.
+           Nuestros principales aliados son los emprendedores que buscan
+           cambiar la dirección del país, mediante la creación de nuevos
+           puestos de trabajo e iniciativas relevantes que den una mayor
+           generación de frutos económicamente sostenibles en el tiempo. <br><br>
+           INVERSIONITAS:<br>
+           Nuestro principal objetivo es dar al socio inversionista
+           una amplia gama de oportunidades de inversión y asesoría empresarial
+           para generar una sana inversión que perdure mediante valiosa información
+           para una toma de decisiones con riesgo calculado. <br><br>
+
+           Empresas cotizadas:<br>
+
+           Buscamos empresas con un valor agregado en el mercado, con ideas
+           retadoras y deseo de éxito total.
+           Mediante un análisis por profesionales en la materia; nuestro mayor
+           deseo es hacer que los sueños de aquellos empresarios-emprendedores sean realidad.
+
+
+         </p>
+
+
+        <hr class="my-4">
+         <h4 class="text-primary">Lema</h4>
+         <br>
+        <h1><footer class="blockquote-footer">Invierte en tus <cite title="Source Title">sueños</cite></footer></h1>
+
+      </div>
+      <div class="col-sm-6">
+        <img src="../assets/img/Carousel/lup3.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+<!-- Historia y Lema --->
+
+<!-- Vision, Mision y Valores -->
+  <div id="nosotros2" class="container animated fadeIn">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card mb-3 ">
+
+          <div class="card-body text-dark">
+            <h4 class="card-title"><strong>Visión</strong></h4>
+            <p class="lead card-text text-justify">
+              Ser el principal motor del
+            mercado económico a nivel mundial, impulsando al emprendedor
+            de pequeña y mediana empresa a cumplir sus sueños y propositos
+             con ayuda colectiva.
+            </p>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="card  mb-3 ">
+          <div class="card-body text-dark">
+            <h4 class="card-title"><strong>Misión</strong></h4>
+            <p class="lead card-text text-justify">
+              Crear el impulso financiero mediante puentes económicos.
+              Ofreciendo herramientas tecnológicas para inversionistas y empresas.
+            </p>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+      </div>
+      <div class="col-sm-6">
+        <div class="card mb-3 ">
+          <div class="card-body text-dark">
+            <h4 class="card-title"><strong>Valores:</strong></h4><br>
+            Trabajamos mediante valores y una ética moral que nos permite
+            tener la confianza de nuestros socios, accionistas e inversionistas
+            como podemos mencionar algunos pilares de nuestra entidad: <br><br>
+
+            <ul class="lead card-text">
+              <li> SERVICIOS DE INFORMACIÓN GLOBAL y TENDENCIAS MACRO Y MICRO ECONOMICAS. </li>
+              <li> SOLUCIONES CORPORATIVAS</li>
+              <li> ASESORIAS ESTRATEGICAS </li>
+              <li> APORTE TECNOLOGICO </li>
+              <li> INNOVACIÓN </li>
+              <li> HONESTIDAD </li>
+              <li> JUSTICIA </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+      </div>
+
+    </div>
+</div>
+<!-- Mision vision y valores -->
+
+<!-- Integrantes -->
+<div  id="nosotros3" class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="promo-size img-thumbnail persona" src="../assets/img/lup1.jpg" alt="">
+    </div>
+    <div class="col-lg-8">
+        <h2 class="display-3">Display 3</h2>
+        <br>
+
+        <p>Airbus est le leader mondial dans le domaine aéronautique. Pour maintenir et consolider cette position nous devons disposer d’une infrastructure robuste, fiable et évolutive.</p>
+        <p>C’est pourquoi nous nous sommes tournés vers les solutions Open Source qui répondent à nos ambitions. Nous avons choisi iTop comme CMDB pour la gestion des opérations Infrastructure.</p>
+        <p>iTop est hébergé sur une infrastructure totalement Open Source et nous permet de gérer aujourd’hui plus de 400 000 assets Front Office (laptop, desktop, printer…). L’application est liée à notre outil de gestion d’incident et de request pour la synchronisation de données en temps réel via des Web Services natifs.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="promo-size img-thumbnail persona" src="../assets/img/lup1.jpg" alt="">
+    </div>
+    <div class="col-lg-8">
+        <h2 class="display-3">Display 3</h2>
+        <br>
+
+        <p>Airbus est le leader mondial dans le domaine aéronautique. Pour maintenir et consolider cette position nous devons disposer d’une infrastructure robuste, fiable et évolutive.</p>
+        <p>C’est pourquoi nous nous sommes tournés vers les solutions Open Source qui répondent à nos ambitions. Nous avons choisi iTop comme CMDB pour la gestion des opérations Infrastructure.</p>
+        <p>iTop est hébergé sur une infrastructure totalement Open Source et nous permet de gérer aujourd’hui plus de 400 000 assets Front Office (laptop, desktop, printer…). L’application est liée à notre outil de gestion d’incident et de request pour la synchronisation de données en temps réel via des Web Services natifs.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="promo-size img-thumbnail persona" src="../assets/img/lup1.jpg" alt="">
+    </div>
+    <div class="col-lg-8">
+        <h2 class="display-3">Display 3</h2>
+        <br>
+
+        <p>Airbus est le leader mondial dans le domaine aéronautique. Pour maintenir et consolider cette position nous devons disposer d’une infrastructure robuste, fiable et évolutive.</p>
+        <p>C’est pourquoi nous nous sommes tournés vers les solutions Open Source qui répondent à nos ambitions. Nous avons choisi iTop comme CMDB pour la gestion des opérations Infrastructure.</p>
+        <p>iTop est hébergé sur une infrastructure totalement Open Source et nous permet de gérer aujourd’hui plus de 400 000 assets Front Office (laptop, desktop, printer…). L’application est liée à notre outil de gestion d’incident et de request pour la synchronisation de données en temps réel via des Web Services natifs.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Integrantes -->
+
+
+<br>
+<app-footer></app-footer>

@@ -1,0 +1,52 @@
+
+<app-navbar-log></app-navbar-log>
+<br>
+
+<div class="jumbotron jumbotron-fluid fadeIn" style="background-image:url('../assets/img/Carousel/lup2.jpg');">
+  <div class="container">
+    <h1 class="display-4" style="color:white;">Empresa por categoría</h1>
+
+  </div>
+</div>
+
+<div class="container margen-arriba">
+
+  <form [formGroup]="forma">
+      <div class="row">
+        <div class="col-lg-12">
+           <input class="form-control"
+                  type="search"
+                  formControlName="categoria"
+                  placeholder="Buscar categoría"
+                  aria-label="Search">
+        </div>
+
+      </div>
+  </form>
+
+   <br>
+
+
+<div class="row">
+  <ng-container class="conteiner" *ngFor="let item of strCategoria">
+
+    <div class="col-md-4">
+      <div class="card p-3 margin-top tamcard"  (click)="CatEmpresa(item.id_categoria_empresa, item.nombre)">
+        <img class="card-img-top" [src]="'../../assets/img/Categoria/' + item.img"  alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.nombre }}</h5>
+          <p class="card-text" *ngIf="item.descripcion"> {{ item.descripcion.substr(0,152) }}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Cantidad {{ item.cant }}</small>
+        </div>
+      </div>
+    </div>
+    <br>
+
+  </ng-container>
+</div>
+
+
+
+ </div>

@@ -1,0 +1,81 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="admin-container">
+  <h3 class="h-admin">{{ Titulo }}</h3>
+  <br/>
+  <div style="text-align:center;">
+    <app-mensaje-admin></app-mensaje-admin>
+  </div>
+  <div class="" style="max-width:700px;">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-3" *ngIf="Operacion!='agregar'">
+          <label>Id:</label>
+          <input type="text" class="form-control" placeholder="Id usuario" maxlength="200" [(ngModel)]="Usuario.id_usuario" disabled>
+        </div>
+        <div class="col-6">
+          <label>Nombre usuario:</label>
+          <input type="text" class="form-control" placeholder="Nombre usuario" maxlength="200" [(ngModel)]="Usuario.nombre" [disabled]="Operacion=='informacion'">
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-3">
+          <label>Estado:</label>
+          <select [(ngModel)]="Usuario.estado" [disabled]="Operacion=='informacion'" class="form-control">
+            <option value="0">Inactivo</option>
+            <option value="1">Activo</option>
+          </select>
+        </div>
+        <div class="col-3">
+          <div *ngIf="roles">
+            <label>Rol:</label>
+            <select class="form-control" [(ngModel)]="Usuario.id_rol" [disabled]="Operacion!='agregar'">
+              <option *ngFor="let rol of roles" [ngValue]="rol.id_rol">{{ rol.nombre }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-6" *ngIf="Usuario.id_rol!=2 && Usuario.id_rol!=0">
+          <label>Persona:</label>
+          <select class="form-control" [(ngModel)]="Usuario.id_persona" [disabled]="Operacion=='informacion'">
+            <option *ngFor="let persona of Personas" [ngValue]="persona.id_persona">{{ persona.nombres + ' ' + persona.apellidos }}</option>
+          </select>
+        </div>
+        <div class="col-6" *ngIf="Usuario.id_rol==2">
+          <label>Empresa:</label>
+          <select class="form-control" [(ngModel)]="Usuario.id_empresa" [disabled]="Operacion=='informacion'">
+            <option *ngFor="let empresa of Empresas" [ngValue]="empresa.id_empresa">{{ empresa.nombre }}</option>
+          </select>
+        </div>
+      </div>
+      <br/>
+      <div class="row" *ngIf="Operacion!='agregar'">
+        <div class="col-3">
+          <label>Fecha creación:</label>
+          <input type="text" class="form-control" placeholder="Fecha creación" maxlength="50" [(ngModel)]="Usuario.fecha_creacion" [disabled]="1==1">
+        </div>
+        <div class="col-3">
+          <label>Fecha ingreso:</label>
+          <input type="text" class="form-control" placeholder="Fecha ingreso" maxlength="50" [(ngModel)]="Usuario.fecha_ingreso" [disabled]="1==1">
+        </div>
+        <div class="col-3">
+          <label>Logueado: </label>
+          <input type="text" class="form-control" placeholder="Logueado" maxlength="10" [(ngModel)]="Usuario.logueado" [disabled]="1==1">
+        </div>
+      </div>
+      <br/>
+      <div *ngIf="Operacion == 'agregar'">
+        <button class="btn btn-sm btn-admin-lup" (click)="AgregarUsuario()">Guardar</button>
+      </div>
+      <div *ngIf="Operacion == 'modificar'">
+        <button class="btn btn-sm btn-admin-lup" (click)="ActualizarUsuario()">Modificar</button>
+      </div>
+      <button class="btn btn-sm btn-link" onclick=" window.location = '/mantU'; ">Regresar</button>
+    </div>
+  </div>
+</div>
+<div style="text-align: center;">
+  <app-loader-admin></app-loader-admin>
+</div>

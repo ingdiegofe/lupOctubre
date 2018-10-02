@@ -1,0 +1,59 @@
+
+.admin-container {
+	padding: 30px 30px;
+}
+
+.admin-form-container {
+	max-width: 800px;
+}
+
+.h-admin {
+  font-weight: bold;
+  color: #2E4053;
+}
+
+.i-operation {
+	color: #2E4053;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.i-delete {
+	color: #E74C3C;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.table-admin {
+  width: 80%;
+  font-size: 12px;
+	min-width:800px;
+}
+
+	.table-admin tr th{
+		color: white;
+		font-weight: bold;
+		background-color: #2E4053;
+		text-align: center;
+	}
+
+	.table-admin tr td {
+		text-align: center;
+	}
+
+.td-admin-opciones {
+		font-size: 16px;
+}
+
+.btn-admin-lup {
+  background-color: #2E4053;
+  color: white;
+  font-weight: bold;
+	cursor:pointer;
+	padding: 10px 10px;
+	border-radius: 10px;
+}
+
+    .btn-admin-lup:active, .btn-admin-lup:hover {
+      background-color: #797D7F;
+    }

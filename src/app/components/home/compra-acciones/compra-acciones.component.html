@@ -1,0 +1,60 @@
+<app-navbar-log></app-navbar-log>
+<br>
+<app-indicador-carga></app-indicador-carga>
+<div class="jumbotron jumbotron-fluid fadeIn" style="background-image:url('../assets/img/Carousel/lup2.jpg');">
+  <div class="container">
+    <h1 class="display-4" style="color:white;">Compra de acciones</h1>
+  </div>
+</div>
+<div class="container margen-arriba">
+  <app-mensaje-sitio-usuario #mensaje></app-mensaje-sitio-usuario>
+  <br/>
+  <!--
+  <app-mensaje-sitio-usuario #mensaje2></app-mensaje-sitio-usuario>
+  <br/>
+  -->
+  <div class="form-group">
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-10">
+              <label>Empresa:</label>
+              <input type="text" class="form-control" placeholder="Nombre de empresa" [(ngModel)]="Empresa.nombre" disabled>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-10">
+              <label>Precio por acción ($):</label>
+              <input type="number" class="form-control" placeholder="Precio por acción" 
+                disabled [(ngModel)]="Compra.precio">
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-10">
+              <label>Cantidad de acciones a comprar:</label>
+              <input type="number" class="form-control" placeholder="Cantidad" [(ngModel)]="Compra.cantidad">
+              <small>Ingrese la cantidad de acciones que desea comprar</small>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-10" style="margin-left: 20px;">
+              <input type="checkbox" class="form-check-input">
+              <small>Acepto los términos y condiciones</small>
+            </div>
+          </div>
+          <br/>
+          <button class="btn btn-lg btn-success" (click)="IniciarCompra()">Comprar Acciones</button>
+
+        </div>
+      </div>
+      <div class="col-8">
+        <embed src="../../../../assets/docs/contrato.pdf" width="800px" height="600px" />
+      </div>
+    </div>
+  </div>
+
+</div>

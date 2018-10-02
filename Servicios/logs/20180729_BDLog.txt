@@ -1,0 +1,79 @@
+12:39:00 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+12:39:00 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$JVqJrIG3qfcptVHwSIgUdOzezy8YxvQE2wzFJ7VLwM.dk0sOfpjdC' WHERE id_usuario = 2
+12:39:04 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+12:40:54 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+12:40:55 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$GtXiaogLgYtw9hlChXso1uCmYTn7KlEZreMSYHpGsdX3L7iCLuQAe' WHERE id_usuario = 2
+12:40:58 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+12:43:09 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+12:43:26 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+03:18:01 PM =>  select  cat.*, count(emp.categoria) cant  from  ad_categoria_empresa cat  left join ad_empresa emp on cat.id_categoria_empresa = emp.categoria where 1 = 1 and cat.nombre like '%%' group by  emp.categoria, cat.id_categoria_empresa order by cat.nombre 
+03:18:06 PM =>  select  *  from  ad_empresa where 1 = 1 and categoria = 1 and nombre like '%%' order by fecha_creacion desc limit 50 
+03:19:11 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, cantidad, precio, total) values(now(), 2, 1, 'Gestión de compra inicializada', 100, 15, 1500) returning id_compra
+03:36:03 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'mrodriguez' ORDER BY 1
+03:36:05 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'mrodriguez' ORDER BY 1
+03:36:16 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'mrodriguez' ORDER BY 1
+03:36:24 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'mrodriguez9' ORDER BY 1
+03:36:25 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$ZA8KWoxT2OLiDPIGGl3fvevx.XfrTcnXXwSs6szuZgGjabVAjS.8u' WHERE id_usuario = 1
+03:38:33 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'mrodriguez9' ORDER BY 1
+03:38:34 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$duoahr4s2oiFqVuhde7XbeUMrZNdQ8Y5hJ7F8QDWMWM3aelhVxvna' WHERE id_usuario = 1
+03:40:42 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:41:59 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = ,logueado = '0',fecha_modificacion = now(),clave = '$2a$10$wIloBRv5Fq3yEbZyvTezoO3cIVBuKyhGJFcQsGf5I7TYGGwJiGCrK' WHERE id_usuario = 1
+03:42:08 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'admin' ORDER BY 1
+03:42:10 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$mi4AYbz5JaJFAXz/P6LeM.9NP1h1cRmYJchNOi8JuJWyD56zCErKm' WHERE id_usuario = 4
+03:42:40 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:42:46 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+03:42:47 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+03:46:16 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:46:19 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+03:46:50 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+03:46:50 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+03:46:51 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:46:58 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:49:36 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:49:38 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:50:03 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:50:04 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:50:33 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:50:36 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:50:54 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:50:56 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:52:40 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:52:44 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:53:29 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:53:32 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:53:57 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:53:58 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:54:38 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:54:41 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:54:58 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:54:59 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+03:56:42 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+03:56:42 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+03:56:49 PM =>  SELECT id_empresa FROM ad_empresa WHERE nombre='Maycom S.A' ORDER BY 1
+03:56:50 PM =>  UPDATE ad_empresa SET  nombre = 'Maycom S.A', categoria = 2 , correo = 'maycomsa@maycom.com.gt', telefono = '51396589', direccion = '15 calle, 15-45, colonia La Prueba zona 3', url = 'www.maycom.com.gt', nit= '63118299', representante_legal= 'Mario Augusto Rodriguez', fecha_modificacion = now(), usuario_modifica = 4 WHERE id_empresa = 4
+03:59:18 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 3 ORDER BY 1
+03:59:18 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+03:59:24 PM =>  SELECT id_empresa FROM ad_empresa WHERE nombre='Business Development Group S.A' ORDER BY 1
+03:59:25 PM =>  UPDATE ad_empresa SET  nombre = 'Business Development Group S.A', categoria = 1 , direccion = 'zona 13', fecha_modificacion = now(), usuario_modifica = 4 WHERE id_empresa = 3
+08:31:20 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+08:31:20 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 3 ORDER BY 1
+08:31:20 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+08:31:38 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+08:31:39 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+08:31:39 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 3 ORDER BY 1
+08:31:40 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+08:32:28 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+08:32:28 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+08:32:28 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 3 ORDER BY 1
+08:32:29 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+08:32:49 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 4 ORDER BY 1
+08:32:49 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+08:32:50 PM =>  SELECT id_empresa, nombre, correo, telefono, direccion, url, nit, representante_legal, categoria  FROM ad_empresa WHERE id_empresa = 3 ORDER BY 1
+08:32:50 PM =>  SELECT id_categoria_empresa, nombre FROM ad_categoria_empresa WHERE 1=1 ORDER BY 1
+08:34:50 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+08:34:51 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$PiPBr.rnrcv5demSsfJAoO3NJpECau1Z/4Gtir.0mNSrnfEC5.m2C' WHERE id_usuario = 2
+08:34:54 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+08:34:57 PM =>  select  cat.*, count(emp.categoria) cant  from  ad_categoria_empresa cat  left join ad_empresa emp on cat.id_categoria_empresa = emp.categoria where 1 = 1 and cat.nombre like '%%' group by  emp.categoria, cat.id_categoria_empresa order by cat.nombre 
+08:34:59 PM =>  select  *  from  ad_empresa where 1 = 1 and categoria = 1 and nombre like '%%' order by fecha_creacion desc limit 50 
+08:41:03 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, cantidad, precio, total) values(now(), , 1, 'Gestión de compra inicializada', 102, 100, 10200) returning id_compra
+08:44:21 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, cantidad, precio, total) values(now(), 2, 1, 'Gestión de compra inicializada', 102, 100, 10200) returning id_compra

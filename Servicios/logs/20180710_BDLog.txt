@@ -1,0 +1,13 @@
+10:15:55 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'admin' ORDER BY 1
+10:15:55 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$RF3.MgURoyKIpWoXWnv78OaCrA3C07pOug91mbVZaIJQkBxYUwQoy' WHERE id_usuario = 4
+10:17:19 PM => SELECT 	U.id_usuario, U.nombre,  CASE	WHEN U.estado = 1 THEN 'Activo' ELSE 'Inactivo' END as estado, to_char(U.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, CASE  	WHEN U.logueado::int = 1 THEN 'Si' ELSE 'No' END as logueado, R.nombre  as rol FROM 	ad_usuario U, ad_rol R WHERE	R.id_rol = U.id_rol
+10:17:22 PM =>  SELECT id_rol, nombre FROM ad_rol WHERE 1=1 ORDER BY 1
+10:17:22 PM => SELECT id_persona, nombres, apellidos, to_char(fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion FROM   ad_persona
+10:17:22 PM => SELECT E.id_empresa, E.nombre, to_char(E.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, U.nombre AS usuario_modifica FROM ad_empresa E, ad_usuario U WHERE E.usuario_modifica = U.id_usuario 
+10:17:42 PM => SELECT * FROM 	ad_usuario WHERE 	nombre = 'mpaz'
+10:17:42 PM =>  INSERT INTO ad_usuario(nombre, estado, id_persona, id_empresa, id_rol , fecha_creacion, fecha_modificacion, clave, logueado )VALUES('mpaz', 1, 8, 'null', 3, now(), now(), 'abc123', B'0')
+10:19:37 PM => SELECT * FROM 	ad_usuario WHERE 	nombre = 'mpaz'
+10:19:38 PM =>  INSERT INTO ad_usuario(nombre, estado, id_persona, id_empresa, id_rol , fecha_creacion, fecha_modificacion, clave, logueado )VALUES('mpaz', 1, 8, 'null', 3, now(), now(), 'abc123', B'0')
+10:24:16 PM => SELECT * FROM 	ad_usuario WHERE 	nombre = 'mpaz'
+10:24:16 PM =>  INSERT INTO ad_usuario(nombre, estado, id_persona, id_empresa, id_rol , fecha_creacion, fecha_modificacion, clave, logueado )VALUES('mpaz', 1, 8, null, 3, now(), now(), 'abc123', B'0')
+10:24:20 PM => SELECT 	U.id_usuario, U.nombre,  CASE	WHEN U.estado = 1 THEN 'Activo' ELSE 'Inactivo' END as estado, to_char(U.fecha_modificacion, 'yyyy/MM/dd hh:mm:ss') as fecha_modificacion, CASE  	WHEN U.logueado::int = 1 THEN 'Si' ELSE 'No' END as logueado, R.nombre  as rol FROM 	ad_usuario U, ad_rol R WHERE	R.id_rol = U.id_rol

@@ -1,0 +1,72 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="admin-container">
+  <h3 class="h-admin">{{ Titulo }}</h3>
+  <br/>
+  <div style="text-align:center;">
+    <app-mensaje-admin></app-mensaje-admin>
+  </div>
+  <div class="admin-form-container">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <label>Nombres:</label>
+          <input type="text" class="form-control" placeholder="Nombres" maxlength="200" [(ngModel)]="Persona.nombres" [disabled]="Operacion=='informacion'">
+        </div>
+        <div class="col-6">
+          <label>Apellidos:</label>
+          <input type="text" class="form-control" placeholder="Apellidos" maxlength="200" [(ngModel)]="Persona.apellidos" [disabled]="Operacion=='informacion'">
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-6">
+          <label>Email:</label>
+          <input type="email" class="form-control" placeholder="Correo electónico" maxlength="50" [(ngModel)]="Persona.email" [disabled]="Operacion=='informacion'">
+        </div>
+        <div class="col-6">
+          <label>Fecha de nacimiento:</label>
+          <input type="text" class="form-control" placeholder="dd/mm/yyyy" maxlength="50" [(ngModel)]="Persona.fecha_nacimiento" [disabled]="Operacion=='informacion'">
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-3">
+          <label>Celular:</label>
+          <input type="text" class="form-control" placeholder="Teléfono celular" maxlength="300" [(ngModel)]="Persona.celular" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+        <div class="col-3">
+            <label>Dpi:</label>
+            <input type="text" class="form-control" placeholder="Dpi" maxlength="50" [(ngModel)]="Persona.dpi" [disabled]="Operacion=='informacion'">
+            <small>* Opcional</small>
+        </div>
+        <div class="col-3">
+            <label>Genero:</label>
+            <select [(ngModel)]="Persona.genero" class="form-control" [disabled]="Operacion=='informacion'">
+              <option value="0">Femenino</option>
+              <option value="1">Masculino</option>
+            </select>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-12">
+          <label>Dirección:</label>
+          <input type="text" class="form-control" placeholder="Dirección" maxlength="200" [(ngModel)]="Persona.direccion" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+      </div>
+      <br/>
+      <div *ngIf="Operacion == 'agregar'">
+        <button class="btn btn-outline-info" (click)="AgregarPersona()">Guardar</button>
+      </div>
+      <div *ngIf="Operacion == 'modificar'">
+        <button class="btn btn-outline-info" (click)="ActualizarPersona()">Modificar</button>
+      </div>
+      <button class="btn btn-sm btn-link" onclick=" window.location = '/mantP'; ">Regresar</button>
+    </div>
+  </div>
+</div>
+<div style="text-align: center;">
+  <app-loader-admin></app-loader-admin>
+</div>

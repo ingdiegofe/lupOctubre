@@ -1,0 +1,136 @@
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form" method="POST" action="/login">
+          <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                  <h2 class="text-center">LUP
+                  <img src="/assets/img/icono1.gif" width="30" height="30" class="d-inline-block align-top" alt="" />
+                  </h2>
+                  <hr>
+              </div>
+          </div>
+
+          <form [formGroup]="forma" (ngSubmit)="Ingresar()">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="form-group has-danger">
+                            <label class="sr-only" for="email">Correo electrónico</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                <input  type="text"
+                                        class="form-control focusedInput"
+                                        formControlName="usuario"
+                                        placeholder="usuario" focus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-control-feedback">
+                            <span class="text-danger align-middle">
+                              <!--  <i class="fa fa-close"></i> Ejemplo mensaje error -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label class="sr-only" for="password">Contraseña</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                <input  type="password"
+                                        class="form-control"
+                                        formControlName="password"
+                                        placeholder="Contraseña" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-control-feedback">
+                            <span class="text-danger align-middle">
+                            <!-- Put password error message here -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8" style="padding-top: .35rem">
+                        <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                                <button type="submit" class="btn btn-outline-info btn-block"> Iniciar sesión</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+          </form>
+
+
+          <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8 text-center" style="padding-top: .35rem; color:gray;">
+                      <p><small>¿Aun no eres miembro? <a href="" [routerLink]="['/registrar']" data-dismiss="modal"> Registrate </a> </small> </p>
+                      <p><small>¿Olvidate tu contraseña? <a href="" [routerLink]="['/registrar']" data-dismiss="modal"> Registrate </a> </small> </p>
+              </div>
+              <div class="col-md-2"></div>
+          </div>
+
+
+
+
+
+          <div class="row" style="padding-top: 1rem">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+
+                <div *ngIf="lngIngreso==2" class="alert alert-danger text-center" role="alert">
+                    {{ strMensaje }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                </div>
+                <div *ngIf="lngIngreso==3" class="alert alert-danger text-center" role="alert">
+                    {{ strMensaje }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                </div>
+                <div *ngIf="lngIngreso==4" class="alert alert-danger text-center" role="alert">
+                    {{ strMensaje }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                </div>
+
+                <div  *ngIf="lngIngresoEntrar==7" class="text-center">
+                  <p><i class="fa fa-spinner w3-spin" style="font-size:40px"></i></p>
+              </div>
+
+              </div>
+              <div class="col-md-2"></div>
+          </div>
+
+          <div class="row" style="padding-top: 1rem">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+              </div>
+          </div>
+      </form>
+      </div>
+
+    </div>
+  </div>
+</div>

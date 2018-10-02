@@ -1,0 +1,76 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="admin-container">
+  <h3 class="h-admin">{{ Titulo }}</h3>
+  <br/>
+  <div style="text-align:center;">
+    <app-mensaje-admin></app-mensaje-admin>
+  </div>
+  <div class="">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <label>Nombre empresa:</label>
+          <input type="text" class="form-control" placeholder="Nombre empresa" maxlength="200" [(ngModel)]="Empresa.nombre" [disabled]="Operacion=='informacion'">
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-3">
+          <label>Correo electónico:</label>
+          <input type="email" class="form-control" placeholder="Correo electónico" maxlength="50" [(ngModel)]="Empresa.correo" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+        <div class="col-3">
+          <label>Teléfono:</label>
+          <input type="text" class="form-control" placeholder="Teléfono" maxlength="50" [(ngModel)]="Empresa.telefono" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+        <div class="col-3">
+          <div *ngIf="categorias">
+            <label>Categoría:</label>
+            <select class="form-control" [(ngModel)]="Empresa.categoria" [disabled]="Operacion=='informacion'">
+              <option *ngFor="let categoria of categorias" [ngValue]="categoria.id_categoria_empresa">{{ categoria.nombre }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-3">
+          <label>Url sitio web:</label>
+          <input type="text" class="form-control" placeholder="Url sitio web" maxlength="300" [(ngModel)]="Empresa.url" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+        <div class="col-3">
+          <label>Nit:</label>
+          <input type="text" class="form-control" placeholder="Nit" maxlength="300" [(ngModel)]="Empresa.nit" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-6">
+          <label>Dirección empresa:</label>
+          <input type="text" class="form-control" placeholder="Dirección empresa" maxlength="200" [(ngModel)]="Empresa.direccion" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+        <div class="col-3">
+          <label>Representante legal:</label>
+          <input type="text" class="form-control" placeholder="Representante legal" maxlength="200" [(ngModel)]="Empresa.representante_legal" [disabled]="Operacion=='informacion'">
+          <small>* Opcional</small>
+        </div>
+      </div>
+      <br/>
+      <div *ngIf="Operacion == 'agregar'">
+        <button class="btn btn-sm btn-admin-lup" (click)="AgregarEmpresa()">Guardar</button>
+      </div>
+      <div *ngIf="Operacion == 'modificar'">
+        <button class="btn btn-sm btn-admin-lup" (click)="ActualizarEmpresa()">Modificar</button>
+      </div>
+      <button class="btn btn-sm btn-link" onclick=" window.location = '/mantE'; ">Regresar</button>
+    </div>
+  </div>
+</div>
+<div style="text-align: center;">
+  <app-loader-admin></app-loader-admin>
+</div>

@@ -1,0 +1,19 @@
+07:51:14 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+07:51:17 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$sfJWwUcDJhDo6d95hD7z/OtDoRRHiCp8zAi/2bn3EuS9kj2X3U4le' WHERE id_usuario = 2
+07:51:21 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+07:51:28 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = ,logueado = '0',fecha_modificacion = now(),clave = '$2a$10$QxNvq3ZKNd3PO922ZuXMVePU1SeMzK2C1UCAAs8WPhhIZ.dzJCNii' WHERE id_usuario = 2
+07:51:33 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+07:51:35 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$NfLVAFQo/g5vP1QP1NSG.uP3H6sUbvChlz3SQHsb.YJf02uJ3.14K' WHERE id_usuario = 2
+07:51:40 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+07:51:42 PM =>  select  cat.*, count(emp.categoria) cant  from  ad_categoria_empresa cat  left join ad_empresa emp on cat.id_categoria_empresa = emp.categoria where 1 = 1 and cat.nombre like '%%' group by  emp.categoria, cat.id_categoria_empresa order by cat.nombre 
+07:51:46 PM =>  select  *  from  ad_empresa where 1 = 1 and categoria = 1 and nombre like '%%' order by fecha_creacion desc limit 50 
+08:08:20 PM => INSERT INTO ad_compra (fecha_compra, usuario, estado, mensaje, total) values (now(), 0, 1, 'Gestión de compra inicializada', 0)
+08:10:04 PM => INSERT INTO ad_compra (fecha_compra, usuario, estado, mensaje, total) values (now(), 0, 1, 'Gestión de compra inicializada', 0)
+08:10:54 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 0, 1, 'Gestión de compra inicializada', 0)
+08:16:03 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 25)
+10:19:34 PM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+10:19:35 PM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$gDXgsrdaYr90RTI4dz0fhOkTPows6JpXr.XeUfcKYSUZr6rBQx1Rq' WHERE id_usuario = 2
+10:19:39 PM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+10:19:41 PM =>  select  cat.*, count(emp.categoria) cant  from  ad_categoria_empresa cat  left join ad_empresa emp on cat.id_categoria_empresa = emp.categoria where 1 = 1 and cat.nombre like '%%' group by  emp.categoria, cat.id_categoria_empresa order by cat.nombre 
+10:19:43 PM =>  select  *  from  ad_empresa where 1 = 1 and categoria = 1 and nombre like '%%' order by fecha_creacion desc limit 50 
+10:47:24 PM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 25)

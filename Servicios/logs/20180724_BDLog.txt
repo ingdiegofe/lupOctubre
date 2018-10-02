@@ -1,0 +1,18 @@
+06:59:47 AM =>  SELECT * FROM ad_usuario  WHERE  nombre = 'dfernandez' ORDER BY 1
+06:59:48 AM =>  UPDATE ad_usuario SET nombre = '',estado = ,fecha_ingreso = now(),logueado = '1',fecha_modificacion = now(),clave = '$2a$10$97sVxp7SiZhsG08lbkxez.erTFMEaCgbRw1S7rry83YECSZpUZxYe' WHERE id_usuario = 2
+06:59:51 AM =>  select  *  from  ad_noticia where 1 = 1 order by fecha_creacion desc limit 50 
+06:59:53 AM =>  select  cat.*, count(emp.categoria) cant  from  ad_categoria_empresa cat  left join ad_empresa emp on cat.id_categoria_empresa = emp.categoria where 1 = 1 and cat.nombre like '%%' group by  emp.categoria, cat.id_categoria_empresa order by cat.nombre 
+06:59:55 AM =>  select  *  from  ad_empresa where 1 = 1 and categoria = 1 and nombre like '%%' order by fecha_creacion desc limit 50 
+07:00:02 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 25)
+07:17:50 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500)
+07:20:29 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500)
+07:26:07 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500)
+07:43:45 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id
+07:44:26 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id
+07:44:54 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id
+07:45:20 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id_compra
+07:45:44 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id_compra
+07:46:03 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id_compra
+07:46:07 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id_compra
+07:47:17 AM => INSERT INTO ad_compra(fecha_compra, usuario, estado, mensaje, total) values(now(), 2, 1, 'Gestión de compra inicializada', 1500) returning id_compra
+07:47:19 AM => UPDATE   ad_compra SET    estado = 2,        mensaje = 'Pago pre aprobado exitosamente',        trama_respuesta = '{"id":"PAY-280426440W199615GLNLS3ZQ","intent":"sale","state":"created","payer":{"payment_method":"paypal"},"transactions":[{"amount":{"total":"1500.00","currency":"USD"},"description":"Adquisición de acciones de empresa Banco Industrial S.A.","item_list":{"items":[{"name":"Acciones Banco Industrial, S.A.","sku":"001","price":"15.00","currency":"USD","quantity":100}]},"related_resources":[]}],"create_time":"2018-07-24T13:47:18Z","links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-280426440W199615GLNLS3ZQ","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-2CN72128SL970050J","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-280426440W199615GLNLS3ZQ/execute","rel":"execute","method":"POST"}],"httpStatusCode":201}' WHERE  id_compra = 19

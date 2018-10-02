@@ -1,0 +1,29 @@
+footer{
+  color: white;
+  bottom: 0;
+   width: 100%;
+}
+
+.footer-bottom{
+  background: black;
+}
+
+.mainfooter{
+  padding-bottom: 0%;
+}
+
+a{
+  color: gray;
+}
+
+#copy{
+  padding-left:  50px;
+}
+
+@media screen and (max-width: 500px){
+
+  .imgfooter {
+    display: none;
+  }
+
+}

@@ -1,0 +1,217 @@
+<app-navbar-log></app-navbar-log>
+
+<br>
+<div class="jumbotron jumbotron-fluid animated fadeIn atras trans"
+      [style.background-image]=" strImg | domseguro: '../assets' ">
+  <div class="container">
+    <br><br>
+    <h1 class="display-4 text-center">{{ strTitulo }}</h1>
+    <br>
+  </div>
+</div>
+
+    <div class="container centrar">
+      <div  class="btn-group btn-group-toggle text-center" data-toggle="buttons">
+        <label class="btn btn-outline-dark active" (click)="Cambio(1)" data-toggle="collapse" href="#nosotros1" aria-expanded="false">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Nosotros
+        </label>
+        <label class="btn btn-outline-dark " (click)="Cambio(2)" data-toggle="collapse" href="#nosotros2" aria-expanded="false">
+          <input type="radio" name="options" id="option2" autocomplete="off" > Economía
+        </label>
+        <label class="btn btn-outline-dark" (click)="Cambio(3)" data-toggle="collapse" href="#nosotros3" aria-expanded="false">
+          <input type="radio" name="options" id="option3" autocomplete="off" > Acciones
+        </label>
+      </div>
+    </div>
+  <hr>
+<!-- Encabezado FIN -->
+
+<!-- Historia y Lema --->
+  <div id="nosotros1" class="jumbotron animated fadeIn ">
+    <div class="row">
+      <div class="col-sm-6">
+         <h4 class="text-primary">Nosotros</h4>
+
+         <p class="text-justify">Somos el Centro de diagnóstico clínico en Guatemala que durante más de 38 años ha manejado con responsabilidad, confianza, calidad en las pruebas realizadas y seriedad de la información confidencial con profesionalismo en el área de servicios de diagnóstico de la salud a la población guatemalteca, ofreciendo  personal capacitado, comprometido en ofrecer la mejor atención y experiencia al paciente.</p>
+         <p class="text-justify">Fundados en el año 1979 por el Dr. José Roberto Amezquita López, con el correr del tiempo y una visión clara de constante innovación Laboratorio Santa Bertilda llega a ser catalogado como “Centro de diagnóstico clínico y por imágenes Santa Bertilda” diversificando así los servicios que brinda en el diagnóstico de la salud. Hoy más 38años después de su fundación continuamos impulsados por los mismos principios y valores con los que inicio nuestro fundador.</p>
+
+         <br><br><br>
+         <hr>
+         <button type="button" class="btn btn-outline-secondary btn-block">Facebook</button><br>
+         <button type="button" class="btn btn-outline-dark btn-block">Web</button>
+
+      </div>
+      <div class="col-sm-6">
+        <img src="../assets/img/Carousel/lup3.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+<!-- Historia y Lema --->
+
+<!-- Vision, Mision y Valores -->
+  <div id="nosotros2" class="container animated fadeIn">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card mb-3 ">
+
+          <div class="card-body text-dark">
+            <h4 class="card-title">Visión</h4>
+            <p class="lead card-text text-justify">Define el objetivo de Coca-Cola a largo plazo como empresa, y es el criterio de peso de sus actuaciones y de las decisiones que toma para lograr tres metas fundamentales:
+
+Refrescar al mundo.
+Inspirar momentos de optimismo y felicidad.
+Crear valor y marcar la diferencia.</p>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="card  mb-3 ">
+          <div class="card-body text-dark">
+            <h4 class="card-title">Misión</h4>
+            <p class="lead card-text text-justify">Es el marco del plan de trabajo y describe lo que se necesita lograr para conseguir la máxima sostenibilidad, calidad y crecimiento. Con ella, se pretenden alcanzar unos objetivos adaptados a diferentes ámbitos:
+Personas: Ser un buen lugar donde trabajar, que las personas se sientan inspiradas para dar cada día lo mejor de sí mismas.
+Bebidas: Ofrecer una variada cartera de productos de calidad que se anticipen y satisfagan los deseos y necesidades de los consumidores.
+Socios: Desarrollar una red de trabajo para crear un valor común y duradero.
+Planeta: Ser un ciudadano responsable que marque la diferencia al ayudar a construir y apoyar comunidades sostenibles.
+Beneficio: Maximizar el rendimiento para los accionistas al tiempo que se tienen presentes las responsabilidades generales de la compañía.
+Productividad: Ser una organización eficaz y dinámica.</p>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+      </div>
+      <div class="col-sm-6">
+        <div class="card mb-3 ">
+          <div class="card-body text-dark">
+            <h4 class="card-title">Valores:</h4><br>
+            <ul class="lead card-text">
+              <li>Liderazgo: esforzarse en dar forma a un futuro mejor.</li>
+              <li>Colaboración: potenciar el talento colectivo.</li>
+              <li>Integridad: ser transparentes.</li>
+              <li>Rendir cuentas: ser responsables.</li>
+              <li>Pasión: estar comprometidos con el corazón y con la mente.</li>
+              <li>Diversidad: contar con un amplio abanico de marcas y ser tan inclusivos como ellas.</li>
+              <li>Calidad: búsqueda de la excelencia.</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+      </div>
+
+    </div>
+</div>
+<!-- Mision vision y valores -->
+
+<!-- Integrantes -->
+<div  id="nosotros3" class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="promo-size img-thumbnail persona" src="../assets/img/lup1.jpg" alt="">
+    </div>
+    <div class="col-lg-8">
+
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Acciones</h5>
+
+                  <ul class="list-group">
+                    <li class="list-group-item">Comprar: <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="número de acciones"></li>
+                    <li class="list-group-item">Valor: Q 100.00</li>
+                    <li class="list-group-item">Comision: 0.0045%</li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Total</h2>
+                  <h1 class="display-3" style="color:black;"> Q 123.00 </h1>
+                  <br>
+                  <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#ConfirmarCompra">Comprar</a>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Integrantes -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ConfirmarCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h2 class="text-center">LUP
+                <img src="/assets/img/icono1.gif" width="30" height="30" class="d-inline-block align-top" alt="" />
+                </h2>
+                <hr>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" disabled>
+                  WeekendBitcoin. Pues es de los más rentables. 1.000 satoshis cada hora y 10.000 satoshis los fines de semana. <br>
+MoonBitcoin. Sería un faucet normal si no fuera porque tiene la peculiaridad de que el pago potencial se va incrementando con el tiempo. Si entras muy frecuentemente recibes un pago bastante bueno. Pero cuando pasa mucho tiempo el pago se ha incrementado. Es una alegría porque no pierdes nada si estás unas horas sin entrar, al revés, se incrementa la cifra total. Nuevo sistema de pago semanal, confirmado que siguen pagando correctamente. Nuevo y muy recomendable.
+BTCClick. Para mí es el PTC más serio de todo el universo Bitcoin. Siempre funcionan bien, siempre pagan cuando deben. Y su salud es muy buena porque siempre aparecen páginas nuevas para visitar, lo cual es la muestra de que cada nuevo negocio que surge en el mundo de bitcoin quiere anunciarse allí. Para mí el más recomendable. <br>
+FreeBitco.in. Es uno de los faucets más rentables que hay ahora mismo. Para muchos de nosotros está entre los mejores e imprescindibles. Introduces el captcha y saldrá un número aleatorio, que tiene una pequeña probabilidad de obtener premios mayores. Esta cantidad es gratis y fija. Luego, sólo si quieres puedes jugarte las ganancias apostando a un juego tipo hi-low. Pero si no quieres, puedes dedicarte simplemente a incrementar tu cuenta y cobrar al final.
+                </textarea>
+                <br>
+
+
+                  <div class="row">
+                      <div class="col-md-1">
+
+                      </div>
+                      <div class="col-md-8" style="padding-top: .35rem">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Acepto</label>
+                        </div>
+                       </div>
+                      <div class="col-md-2"></div>
+                  </div>
+
+
+                  <div class="row">
+                      <div class="col-md-12" style="padding-top: .35rem">
+                          <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                                  <button class="btn btn-outline-success btn-block"> Confirmar </button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <br>
+
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

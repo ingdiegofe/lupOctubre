@@ -1,0 +1,105 @@
+<app-navbar-in></app-navbar-in>
+<br>
+<div class="jumbotron jumbotron-fluid fadeIn" style="background-image:url('../assets/img/Carousel/lup2.jpg');">
+  <div class="container">
+    <h1 class="display-4">Contactanos</h1>
+
+  </div>
+</div>
+<div class="container fadeIn">
+
+      <div class="col-sm-12">
+        <div class="card border-secundary mb-3">
+           <div class="card-header"><p class="h2" style="color:gray;"> Mensaje </p></div>
+          <div class="card-body text-info">
+
+            <form [formGroup]="forma" (ngSubmit)="isEnviar && EnvioCorreo()">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Nombre</label>
+                    <input formControlName="nombre"
+                        type="text"
+                        class="form-control">
+                        <div *ngIf="forma.controls['nombre'].errors?.required"
+                             class="form-control-feedback text-muted">
+                            <small>*Requerido</small>
+                       </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email</label>
+                    <input formControlName="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="name@example.com">
+
+                      <div *ngIf="forma.controls['email'].errors?.required"
+                           class="form-control-feedback text-muted">
+                          <small>*Requerido</small>
+                     </div>
+                      <div *ngIf="forma.controls['email'].errors?.pattern"
+                           class="form-control-feedback text-muted">
+                          <small>*correo invalido</small>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Teléfono</label>
+                    <input formControlName="telefono"
+                          type="text"
+                          class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Asunto</label>
+                    <input formControlName="asunto"
+                          type="text"
+                          class="form-control">
+                          <div *ngIf="forma.controls['asunto'].errors?.required"
+                               class="form-control-feedback text-muted">
+                              <small>*Requerido</small>
+                         </div>
+                  </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Mensaje</label>
+                      <textarea formControlName="mensaje"
+                                class="form-control"
+                                rows="3">
+                       </textarea>
+                       <div *ngIf="forma.controls['mensaje'].errors?.required"
+                            class="form-control-feedback text-muted">
+                           <small>*Requerido</small>
+                      </div>
+                    </div>
+
+                    <button type="submit" [ngClass]="{disabled : !isEnviar}" class="btn btn-dark btn-block" >Enviar</button>
+
+              </form>
+
+              <br>
+
+              <div *ngIf="lngIngreso==1" class="alert alert-danger text-center" role="alert">
+                  {{ strMensaje }}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+              </div>
+              <div *ngIf="lngIngreso==2" class="alert alert-success text-center" role="alert">
+                  {{ strMensaje }}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+              </div>
+              <div  *ngIf="!lngAgregar==0" class="text-center">
+                  <i class="fa fa-circle-o-notch w3-spin" style="font-size:40px"></i>
+              </div>
+
+
+
+          </div>
+
+        </div>
+        <hr>
+
+      </div>
+    </div>
+
+    <br>
+
+    <app-footer></app-footer>

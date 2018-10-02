@@ -1,0 +1,20 @@
+<app-navbar-log></app-navbar-log>
+<br>
+<app-indicador-carga></app-indicador-carga>
+<div class="jumbotron jumbotron-fluid fadeIn" style="background-image:url('../assets/img/Carousel/lup2.jpg');">
+  <div class="container">
+    <h1 class="display-4" style="color:white;">Procesar compra de acciones</h1>
+  </div>
+</div>
+<div class="container margen-arriba">
+  <app-mensaje-sitio-usuario #mensaje></app-mensaje-sitio-usuario>
+  <br/>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-4">
+          <label>Token de compra Pagadito:</label>
+          <input type="text" class="form-control" placeholder="Token de compra" [(ngModel)]="token" disabled>
+      </div>
+    </div>
+  </div>
+</div>

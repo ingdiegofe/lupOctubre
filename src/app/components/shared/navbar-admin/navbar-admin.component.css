@@ -1,0 +1,49 @@
+.navbar-lup-admin {
+	background-color: #2E4053;
+}
+
+.navbar-lup-admin-img {
+	width:40px;
+	margin-right: 20px;
+}
+
+
+.navbar-lup-admin-menu {
+	/*height:60px;*/
+}
+
+	.navbar-lup-admin-menu ul li {
+		width:100%;
+		min-width: 150px;
+		height:100%;
+		padding: 10px 10px;
+		text-align:center;
+		font-weight:bold;
+		cursor: pointer;
+		color: white;
+	}
+
+		.navbar-lup-admin-menu ul li:active, .navbar-lup-admin-menu ul li:hover {
+			background-color:#797D7F;
+		}
+
+		.navbar-lup-admin-menu ul li i {
+			margin-right:10px;
+		}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .active {
+	background-color:#797D7F;
+}
+
+.navbar-dark .navbar-toggler {
+	color: white;
+	border: 2px solid white;
+}
+
+.navbar-dark .navbar-toggler-icon {
+	color: white;
+}
